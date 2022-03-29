@@ -26,6 +26,11 @@ export default function Index() {
             Remix Docs
           </a>
         </li>
+        <li>
+          <a target="_blank" href="https://google.com" rel="noreferrer">
+            Redirecto to Google
+          </a>
+        </li>
       </ul>
     </div>
   );
