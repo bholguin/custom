@@ -1,4 +1,4 @@
-export default function Index() {
+const Index = () => {
   return (
     <div style={{ fontFamily: "system-ui, sans-serif", lineHeight: "1.4" }}>
       <h1>Welcome to Remix</h1>
@@ -31,7 +31,14 @@ export default function Index() {
             Redirecto to Google
           </a>
         </li>
+        <li>
+          <a href="/demo" rel="noreferrer">
+            Demo page
+          </a>
+        </li>
       </ul>
     </div>
   );
 }
+
+export default Index

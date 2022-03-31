@@ -1,13 +1,15 @@
 import { renderToString } from "react-dom/server";
 import { RemixServer } from "remix";
+import AxiosInterceptor from "./config/axios";
 import type { EntryContext } from "remix";
 
-export default function handleRequest(
+
+const handleRequest = (
   request: Request,
   responseStatusCode: number,
   responseHeaders: Headers,
   remixContext: EntryContext
-) {
+) => {
   let markup = renderToString(
     <RemixServer context={remixContext} url={request.url} />
   );
@@ -19,3 +21,6 @@ export default function handleRequest(
     headers: responseHeaders,
   });
 }
+
+
+export default AxiosInterceptor(handleRequest) 
